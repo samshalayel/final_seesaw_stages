@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "group-aswan-placeholder",
+      "type": "group",
+      "data": { "label": "Solution Planning (Aswan) - Prototype" },
+      "position": { "x": 0, "y": 0 },
+      "width": 800,
+      "height": 600
+    },
+    {
+      "id": "aswan-arch-1",
+      "type": "output",
+      "data": { "label": "System Architecture" },
+      "position": { "x": 50, "y": 100 },
+      "parentId": "group-aswan-placeholder",
+      "extent": "parent"
+    },
+    {
+      "id": "aswan-db-2",
+      "type": "default",
+      "data": { "label": "Database Schema" },
+      "position": { "x": 300, "y": 100 },
+      "parentId": "group-aswan-placeholder",
+      "extent": "parent"
+    },
+    {
+      "id": "aswan-api-3",
+      "type": "default",
+      "data": { "label": "API Specifications" },
+      "position": { "x": 50, "y": 300 },
+      "parentId": "group-aswan-placeholder",
+      "extent": "parent"
+    }
+  ],
+  "edges": [
+    { "id": "e-arch-db", "source": "aswan-arch-1", "target": "aswan-db-2" },
+    { "id": "e-arch-api", "source": "aswan-arch-1", "target": "aswan-api-3" }
+  ],
+  "exportedAt": "2026-05-18T11:55:00.000Z"
+}
