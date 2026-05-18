@@ -1,0 +1,522 @@
+{
+  "nodes": [
+    {
+      "id": "group-pd-20240520-gym_sfm",
+      "type": "group",
+      "data": {
+        "label": "PD — Problem Discovery"
+      },
+      "position": {
+        "x": 120,
+        "y": -600
+      },
+      "width": 2000,
+      "height": 1800,
+      "style": {
+        "width": 2000,
+        "height": 1800,
+        "zIndex": -1
+      }
+    },
+    {
+      "id": "pd-summary-1",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-summary-node",
+      "data": {
+        "description": "The gym management project's backend, built with FastAPI on a VPS, was working fine but now sporadically fails, throwing 402 or 500 errors when users attempt to register, despite the frontend seeming operational. Troubleshooting via browser console and network tabs has been exhausting and inconclusive.",
+        "points": [
+          "FastAPI backend on VPS is intermittently unresponsive.",
+          "Frontend registration requests fail with variable errors (402, 500).",
+          "Problem disrupts operational flow unexpectedly.",
+          "Manual debugging attempts have been time-consuming and unsuccessful."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "stakeholder_statement",
+          "confidence": 0.95,
+          "derived_from": [],
+          "validation_status": "human_pending"
+        },
+        {
+          "point_index": 1,
+          "source": "stakeholder_statement",
+          "confidence": 0.95,
+          "derived_from": [],
+          "validation_status": "human_pending"
+        },
+        {
+          "point_index": 2,
+          "source": "stakeholder_statement",
+          "confidence": 0.90,
+          "derived_from": [],
+          "validation_status": "human_pending"
+        },
+        {
+          "point_index": 3,
+          "source": "stakeholder_statement",
+          "confidence": 0.90,
+          "derived_from": [],
+          "validation_status": "human_pending"
+        }
+      ],
+      "position": {
+        "x": 40,
+        "y": 80
+      },
+      "width": 320,
+      "height": 280
+    },
+    {
+      "id": "pd-actors-2",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-actors-node",
+      "data": {
+        "description": "Parties impacted by the unstable service.",
+        "points": [
+          "Gym Members - Cannot complete registration.",
+          "Project Owner - Operations are blocked, losing business.",
+          "Developer - Receives complaints, under pressure to fix."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "stakeholder_statement",
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 1,
+          "source": "stakeholder_statement",
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 2,
+          "source": "stakeholder_statement",
+          "derived_from": ["pd-summary-1"]
+        }
+      ],
+      "position": {
+        "x": 420,
+        "y": 80
+      },
+      "width": 300,
+      "height": 240
+    },
+    {
+      "id": "pd-goals-3",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-goals-node",
+      "data": {
+        "description": "Operational goals we want to achieve.",
+        "points": [
+          "Restore stability to member registration.",
+          "Prevent operational blockages.",
+          "Minimize manual intervention for maintenance."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "ai_inference",
+          "derived_from": ["pd-pain-4"]
+        },
+        {
+          "point_index": 1,
+          "source": "ai_inference",
+          "derived_from": ["pd-pain-4"]
+        },
+        {
+          "point_index": 2,
+          "source": "ai_inference",
+          "derived_from": ["pd-pain-4"]
+        }
+      ],
+      "position": {
+        "x": 760,
+        "y": 80
+      },
+      "width": 320,
+      "height": 260
+    },
+    {
+      "id": "pd-pain-4",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-pain-points-node",
+      "data": {
+        "description": "Specific issues expressed.",
+        "points": [
+          "Registration requests give unpredictable 402/500 errors.",
+          "Checking logs and network tabs is tiring.",
+          "The service stops working without warning."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "stakeholder_statement",
+          "confidence": 0.95,
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 1,
+          "source": "stakeholder_statement",
+          "confidence": 0.90,
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 2,
+          "source": "stakeholder_statement",
+          "confidence": 0.90,
+          "derived_from": ["pd-summary-1"]
+        }
+      ],
+      "position": {
+        "x": 1120,
+        "y": 80
+      },
+      "width": 320,
+      "height": 260
+    },
+    {
+      "id": "pd-constraints-5",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-constraints-node",
+      "data": {
+        "description": "Hard limits we must operate within.",
+        "points": [
+          "Must run as a background service.",
+          "Must remain on current VPS setup."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "domain_knowledge",
+          "confidence": 0.85,
+          "derived_from": []
+        },
+        {
+          "point_index": 1,
+          "source": "domain_knowledge",
+          "confidence": 0.85,
+          "derived_from": []
+        }
+      ],
+      "position": {
+        "x": 40,
+        "y": 420
+      },
+      "width": 320,
+      "height": 260
+    },
+    {
+      "id": "pd-scope-6",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-scope-node",
+      "data": {
+        "description": "Desired outcomes and deferred items.",
+        "inScope": [
+          "Achieve stable service operation.",
+          "Ensure continuous background functioning."
+        ],
+        "outScope": [
+          "Redesigning the member intake process."
+        ]
+      },
+      "scope_provenance": [
+        {
+          "scope_type": "inScope",
+          "item_index": 0,
+          "source": "ai_inference",
+          "confidence": 0.90,
+          "derived_from": ["pd-goals-3"]
+        },
+        {
+          "scope_type": "inScope",
+          "item_index": 1,
+          "source": "ai_inference",
+          "confidence": 0.90,
+          "derived_from": ["pd-goals-3"]
+        },
+        {
+          "scope_type": "outScope",
+          "item_index": 0,
+          "source": "domain_knowledge",
+          "confidence": 0.70,
+          "derived_from": []
+        }
+      ],
+      "position": {
+        "x": 420,
+        "y": 420
+      },
+      "width": 320,
+      "height": 300
+    },
+    {
+      "id": "pd-signals-7",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-signals-node",
+      "data": {
+        "description": "Behavioral indicators of success.",
+        "points": [
+          "Registrations complete without errors.",
+          "Service uptime is maintained consistently.",
+          "Developers are not distracted by stability issues."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "ai_inference",
+          "derived_from": ["pd-goals-3", "pd-pain-4"]
+        },
+        {
+          "point_index": 1,
+          "source": "ai_inference",
+          "derived_from": ["pd-goals-3", "pd-pain-4"]
+        },
+        {
+          "point_index": 2,
+          "source": "ai_inference",
+          "derived_from": ["pd-goals-3", "pd-pain-4"]
+        }
+      ],
+      "position": {
+        "x": 760,
+        "y": 420
+      },
+      "width": 320,
+      "height": 260
+    },
+    {
+      "id": "pd-unknowns-8",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-unknowns-node",
+      "data": {
+        "description": "Informational and boundary questions.",
+        "points": [
+          "[معلوماتي] What is the current method of deployment on the VPS?",
+          "[معلوماتي] Can specific errors be found in the service logs?",
+          "[حدودي] What happens if this issue is not addressed immediately?",
+          "[حدودي] Are there constraints on the VPS preventing proper execution?"
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "ai_inference",
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 1,
+          "source": "ai_inference",
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 2,
+          "source": "ai_inference",
+          "derived_from": ["pd-summary-1"]
+        },
+        {
+          "point_index": 3,
+          "source": "ai_inference",
+          "derived_from": ["pd-summary-1"]
+        }
+      ],
+      "position": {
+        "x": 1120,
+        "y": 420
+      },
+      "width": 320,
+      "height": 260
+    },
+    {
+      "id": "pd-insight-9",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-summary-node",
+      "data": {
+        "points": [
+          "The current deployment arrangement lacks resilient management."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "ai_inference",
+          "derived_from": ["pd-summary-1", "pd-pain-4"]
+        }
+      ],
+      "position": {
+        "x": 40,
+        "y": 780
+      },
+      "width": 320,
+      "height": 220
+    },
+    {
+      "id": "pd-outcome-10",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-goals-node",
+      "data": {
+        "points": [
+          "The registration service functions reliably in the background."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "ai_inference",
+          "derived_from": ["pd-goals-3", "pd-pain-4"]
+        }
+      ],
+      "position": {
+        "x": 420,
+        "y": 780
+      },
+      "width": 320,
+      "height": 220
+    },
+    {
+      "id": "pd-direction-11",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "pd-summary-node",
+      "data": {
+        "points": [
+          "Improve the robustness of background process management."
+        ]
+      },
+      "provenance": [
+        {
+          "point_index": 0,
+          "source": "ai_inference",
+          "derived_from": ["pd-insight-9", "pd-outcome-10"]
+        }
+      ],
+      "position": {
+        "x": 760,
+        "y": 780
+      },
+      "width": 320,
+      "height": 220
+    },
+    {
+      "id": "gate-problem-12",
+      "parentId": "group-pd-20240520-gym_sfm",
+      "extent": "parent",
+      "type": "gate-problem",
+      "data": {
+        "gateStatus": "pending_human_review",
+        "decisionAuthority": "Human Only",
+        "gateChecklist": [
+          "Summary exists",
+          "Actors defined",
+          "Goals defined",
+          "Pain points defined",
+          "Scope defined",
+          "Signals defined",
+          "Unknowns defined",
+          "No solution smuggling",
+          "Boundary questions included",
+          "Insight is root cause",
+          "Provenance present everywhere"
+        ]
+      },
+      "position": {
+        "x": 350,
+        "y": 1100
+      },
+      "width": 700,
+      "height": 300
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-1-2",
+      "type": "custom",
+      "source": "pd-summary-1",
+      "target": "pd-actors-2"
+    },
+    {
+      "id": "e-2-3",
+      "type": "custom",
+      "source": "pd-actors-2",
+      "target": "pd-goals-3"
+    },
+    {
+      "id": "e-3-4",
+      "type": "custom",
+      "source": "pd-goals-3",
+      "target": "pd-pain-4"
+    },
+    {
+      "id": "e-5-6",
+      "type": "custom",
+      "source": "pd-constraints-5",
+      "target": "pd-scope-6"
+    },
+    {
+      "id": "e-6-7",
+      "type": "custom",
+      "source": "pd-scope-6",
+      "target": "pd-signals-7"
+    },
+    {
+      "id": "e-7-8",
+      "type": "custom",
+      "source": "pd-signals-7",
+      "target": "pd-unknowns-8"
+    },
+    {
+      "id": "e-4-9",
+      "type": "custom",
+      "source": "pd-pain-4",
+      "target": "pd-insight-9"
+    },
+    {
+      "id": "e-8-10",
+      "type": "custom",
+      "source": "pd-unknowns-8",
+      "target": "pd-outcome-10"
+    },
+    {
+      "id": "e-9-11",
+      "type": "custom",
+      "source": "pd-insight-9",
+      "target": "pd-direction-11"
+    },
+    {
+      "id": "e-10-11",
+      "type": "custom",
+      "source": "pd-outcome-10",
+      "target": "pd-direction-11"
+    },
+    {
+      "id": "e-11-gate",
+      "type": "custom",
+      "source": "pd-direction-11",
+      "target": "gate-problem-12"
+    },
+    {
+      "id": "e-insight-gate",
+      "type": "custom",
+      "source": "pd-insight-9",
+      "target": "gate-problem-12"
+    }
+  ],
+  "evidence": [],
+  "exportedAt": "2024-05-20T10:00:00.000Z"
+}
