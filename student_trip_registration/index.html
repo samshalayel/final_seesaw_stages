@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Trip Registration</title>
-    <link rel="stylesheet" href="style.css">
+    <title>رحلة مدرسية - تسجيل الطلاب</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-container">
-        <h1>تسجيل الطلاب للرحلة المدرسية</h1>
-        <form>
-            <label for="student-name">اسم الطالب:</label>
-            <input type="text" id="student-name" name="student-name" required>
-
-            <label for="grade">الصف:</label>
-            <input type="text" id="grade" name="grade" required>
-
-            <input type="submit" value="تسجيل">
-        </form>
-    </div>
-    <div class="trip-schedule">
-        <h2>جدول الرحلة</h2>
-        <ul>
-            <li>الوصول إلى المتحف - 10:00 صباحًا</li>
-            <li>جولة بالمدينة - 12:00 ظهرًا</li>
-            <li>الغداء في الحديقة - 2:00 مساءً</li>
-            <li>العودة إلى المدرسة - 4:00 مساءً</li>
-        </ul>
-    </div>
-    <div class="fees">
-        <h2>تحصيل الرسوم</h2>
-        <p>تكلفة الرحلة: 50 جنيه</p>
-    </div>
+    <header>
+        <h1>الرحلة المدرسية</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">التسجيل</a></li>
+                <li><a href="schedule.html">جدول الرحلة</a></li>
+                <li><a href="fees.html">تحصيل الرسوم</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="registration">
+            <h2>تسجيل الطلاب</h2>
+            <form>
+                <label for="student-name">اسم الطالب:</label>
+                <input type="text" id="student-name" name="student-name" required>
+                <label for="student-age">العمر:</label>
+                <input type="number" id="student-age" name="student-age" required>
+                <label for="parent-contact">وسيلة الاتصال بولي الأمر:</label>
+                <input type="text" id="parent-contact" name="parent-contact" required>
+                <button type="submit">تسجيل</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 المدرسة</p>
+    </footer>
 </body>
 </html>
