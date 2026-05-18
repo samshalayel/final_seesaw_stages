@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام CRUD لصالون حلاقة</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #1c1e21;
+            background-color: #f0f2f5;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, button {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1877f2;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>إدارة معلومات الحلاقين</h1>
+        <form>
+            <label for="barber-name">اسم الحلاق:</label>
+            <input type="text" id="barber-name" name="barber-name" required>
+
+            <label for="barber-phone">رقم الهاتف:</label>
+            <input type="tel" id="barber-phone" name="barber-phone" required>
+
+            <button type="submit">إضافة حلاق</button>
+        </form>
+    </div>
+</body>
+</html>
