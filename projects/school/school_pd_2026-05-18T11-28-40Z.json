@@ -1,0 +1,688 @@
+{
+  "nodes": [
+    {
+      "id": "group-pd-20260518-school",
+      "type": "group",
+      "data": {
+        "label": "PD — Problem Discovery"
+      },
+      "position": {
+        "x": 120,
+        "y": -600
+      },
+      "width": 2000,
+      "height": 1800,
+      "style": {
+        "width": 2000,
+        "height": 1800,
+        "zIndex": -1
+      }
+    },
+    {
+      "id": "pd-summary-1",
+      "type": "pd-summary-node",
+      "data": {
+        "label": "Problem Summary",
+        "description": "لقيت في عندي مدرسة أو نقطة تعليمية يعني فيها 700 طالب، ما فيش نظام محوسب، بيجوا الطلاب بيسجلوا. بيسجلوهم في السجلات اليدوية. والسجلات اليدوية هذه ما بنعرفش الطالب مكرر. ممكن ينفصلوا ويبطلوا واحنا مش حاسين إنه مبطل. و في الرسوم في ناس بتدفع نفس ال ما بتدفعش. ناس بتدفع جزئي. ف 700 طالب صعب على نقطة تعليمية أو على مدرسة صغيرة تسيطر عليهم. بشكل ورقي يعني.",
+        "points": [
+          "مدرسة تضم 700 طالب تعتمد كلياً على السجلات اليدوية.",
+          "صعوبة في اكتشاف تكرار بيانات الطلاب أو حالات الانفصال والتبسيط.",
+          "غياب الدقة في تتبع دفع الرسوم الدراسية (كلية، جزئية، منعدمة).",
+          "فقدان السيطرة التشغيلية بسبب الاعتماد على الورق مع عدد كبير من الطلاب."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct quote describing the current situation."
+          },
+          {
+            "point_index": 1,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct quote describing specific issues."
+          },
+          {
+            "point_index": 2,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct quote regarding financial tracking issues."
+          },
+          {
+            "point_index": 3,
+            "source": "stakeholder_statement",
+            "confidence": 0.9,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Summary of the general pain expressed by stakeholder."
+          }
+        ]
+      },
+      "position": {
+        "x": 40,
+        "y": 80
+      },
+      "width": 320,
+      "height": 280,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-actors-2",
+      "type": "pd-actors-node",
+      "data": {
+        "label": "Actors",
+        "description": "الأطراف المتأثرة — من يعاني",
+        "points": [
+          "الإدارة — تعاني من فقدان السيطرة التشغيلية وصعوبة تتبع البيانات.",
+          "قسم التسجيل — يواجه مشاكل في تكرار البيانات وعدم معرفة حالة الطالب.",
+          "قسم المالية — يجد صعوبة في ضبط تحصيل الرسوم.",
+          "المدرسون — يتأثرون بغياب سجلات موثوقة للطلاب والحصص."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Inferred from 'صعب تسيطر عليهم بشكل ورقي'."
+          },
+          {
+            "point_index": 1,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Directly based on 'ما بنعرفش الطالب مكرر... واحنا مش حاسين'."
+          },
+          {
+            "point_index": 2,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Directly based on 'في الرسوم في ناس بتدفع...'"
+          },
+          {
+            "point_index": 3,
+            "source": "ai_inference",
+            "confidence": 0.8,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Inferred need for reliable data for teaching functions."
+          }
+        ]
+      },
+      "position": {
+        "x": 420,
+        "y": 80
+      },
+      "width": 300,
+      "height": 240,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-goals-3",
+      "type": "pd-goals-node",
+      "data": {
+        "label": "Goals",
+        "description": "ماذا نريد تحقيقه — بدون كيف",
+        "points": [
+          "تحقيق الاستغلال الأمثل للبيانات بضبط السجلات.",
+          "رفع كفاءة عمليات التسجيل والمتابعة.",
+          "ضمان دقة وشفافية التحصيلات المالية.",
+          "تسهيل الوصول لسجلات شاملة للعملية التعليمية."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Goal to counter pain of duplicated/lost student records."
+          },
+          {
+            "point_index": 1,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Goal to counter pain of manual, inefficient processing."
+          },
+          {
+            "point_index": 2,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Goal to counter pain of inaccurate fee tracking."
+          },
+          {
+            "point_index": 3,
+            "source": "ai_inference",
+            "confidence": 0.8,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Goal to address expressed need for organized educational data."
+          }
+        ]
+      },
+      "position": {
+        "x": 760,
+        "y": 80
+      },
+      "width": 320,
+      "height": 260,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-pain-4",
+      "type": "pd-pain-points-node",
+      "data": {
+        "label": "Pain Points",
+        "description": "مشاكل صريحة من القصة — بكلمات المستخدم",
+        "points": [
+          "تكرار تسجيل الطالب دون علم الإدارة.",
+          "انفصال الطالب أو توقفه دون رصده.",
+          "عدم القدرة على فرز من سدد الرسوم ممن لم يسدد.",
+          "صعوبة السيطرة على عدد 700 طالب يدوياً."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct quote showing specific pain."
+          },
+          {
+            "point_index": 1,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct quote showing specific pain."
+          },
+          {
+            "point_index": 2,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct quote showing financial tracking pain."
+          },
+          {
+            "point_index": 3,
+            "source": "stakeholder_statement",
+            "confidence": 0.95,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Direct statement of scale problem."
+          }
+        ]
+      },
+      "position": {
+        "x": 1120,
+        "y": 80
+      },
+      "width": 320,
+      "height": 260,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-constraints-5",
+      "type": "pd-constraints-node",
+      "data": {
+        "label": "Constraints",
+        "description": "حدود صلبة — ما لا نغيره",
+        "points": [
+          "استمرار عمل المدرسة أثناء تحسين الوضع.",
+          "الالتزام بقدرة تشغيلية محددة.",
+          "الحفاظ على البيانات التاريخية (إن وجدت)."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "domain_knowledge",
+            "confidence": 0.75,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Assumption that school cannot halt operations."
+          },
+          {
+            "point_index": 1,
+            "source": "domain_knowledge",
+            "confidence": 0.7,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "General operational constraint."
+          },
+          {
+            "point_index": 2,
+            "source": "domain_knowledge",
+            "confidence": 0.7,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "General data management constraint."
+          }
+        ]
+      },
+      "position": {
+        "x": 40,
+        "y": 420
+      },
+      "width": 320,
+      "height": 260,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-scope-6",
+      "type": "pd-scope-node",
+      "data": {
+        "label": "Scope",
+        "description": "desired outcomes + ما نؤجل",
+        "inScope": [
+          "ضبط تكرار بيانات الطلاب وحالة قهم.",
+          "تتبع دقيق لتحصيل الرسوم الدراسية.",
+          "تنظيم معلومات المدرسين، المواد، والامتحانات.",
+          "تسهيل متابعة حضور الطلاب ونتائجهم."
+        ],
+        "outScope": [
+          "إدارة المكتبة أو العمليات غير الأكاديمية.",
+          "تخصيص وسيلة وصول للأولياء في هذه المرحلة.",
+          "التعامل مع التسويق أو استقطاب الطلاب."
+        ],
+        "scope_provenance": [
+          {
+            "scope_type": "inScope",
+            "item_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.9,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Direct response to student data pain points."
+          },
+          {
+            "scope_type": "inScope",
+            "item_index": 1,
+            "source": "ai_inference",
+            "confidence": 0.9,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Direct response to fee tracking pain point."
+          },
+          {
+            "scope_type": "inScope",
+            "item_index": 2,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Response to stakeholder's list of requirements."
+          },
+          {
+            "scope_type": "inScope",
+            "item_index": 3,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Response to stakeholder's list of requirements."
+          },
+          {
+            "scope_type": "outScope",
+            "item_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.7,
+            "derived_from": [],
+            "validation_status": "assumption",
+            "reasoning": "Assumed outside immediate priority based on story."
+          },
+          {
+            "scope_type": "outScope",
+            "item_index": 1,
+            "source": "ai_inference",
+            "confidence": 0.7,
+            "derived_from": [],
+            "validation_status": "assumption",
+            "reasoning": "Assumed deferred to keep initial phase manageable."
+          },
+          {
+            "scope_type": "outScope",
+            "item_index": 2,
+            "source": "ai_inference",
+            "confidence": 0.7,
+            "derived_from": [],
+            "validation_status": "assumption",
+            "reasoning": "Assumed not part of internal operational fix."
+          }
+        ]
+      },
+      "position": {
+        "x": 420,
+        "y": 420
+      },
+      "width": 320,
+      "height": 300,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-signals-7",
+      "type": "pd-signals-node",
+      "data": {
+        "label": "Success Signals",
+        "description": "مؤشرات سلوكية — بدون نسب مخترعة",
+        "points": [
+          "اختفاء حالات الطلاب المكررين في السجلات.",
+          "توقف مفاجآت انفصال الطلاب دون علم الإدارة.",
+          "وضوح حالة كل طالب مالياً بنظرة واحدة.",
+          "انخفاض الجهد البشري في إعداد جدول الحصص."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Signal that student data pain is resolved."
+          },
+          {
+            "point_index": 1,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Signal that tracking pain is resolved."
+          },
+          {
+            "point_index": 2,
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Signal that financial data pain is resolved."
+          },
+          {
+            "point_index": 3,
+            "source": "ai_inference",
+            "confidence": 0.8,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Signal that operational scheduling pain is reduced."
+          }
+        ]
+      },
+      "position": {
+        "x": 760,
+        "y": 420
+      },
+      "width": 320,
+      "height": 260,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-unknowns-8",
+      "type": "pd-unknowns-node",
+      "data": {
+        "label": "Unknowns",
+        "description": "أسئلة معلوماتية + حدودية",
+        "points": [
+          "[معلوماتي] ما هو العدد الفعلي للطلاب بعد استبعاد المكررين؟",
+          "[معلوماتي] كيف يتم تحديد الرسوم لكل طالب حالياً؟",
+          "[حدودي] ما هي الموارد المتاحة لتشغيل الطريقة الجديدة؟",
+          "[حدودي] ما هو الأثر المالي لعدم ضبط تحصيل الرسوم لعام آخر؟",
+          "[معلوماتي] ما هو شكل جدول الحصص الحالي وعناصره؟"
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.8,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Factual question to quantify the 'duplicate' pain."
+          },
+          {
+            "point_index": 1,
+            "source": "ai_inference",
+            "confidence": 0.8,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Factual question about financial process."
+          },
+          {
+            "point_index": 2,
+            "source": "ai_inference",
+            "confidence": 0.7,
+            "derived_from": [],
+            "validation_status": "human_pending",
+            "reasoning": "Constraint/Boundary question regarding implementation data."
+          },
+          {
+            "point_index": 3,
+            "source": "ai_inference",
+            "confidence": 0.75,
+            "derived_from": [
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Boundary question to assess business impact."
+          },
+          {
+            "point_index": 4,
+            "source": "ai_inference",
+            "confidence": 0.8,
+            "derived_from": [
+              "pd-summary-1"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Factual question to define scheduling need."
+          }
+        ]
+      },
+      "position": {
+        "x": 1120,
+        "y": 420
+      },
+      "width": 320,
+      "height": 260,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-insight-9",
+      "type": "pd-summary-node",
+      "data": {
+        "label": "Problem Insight",
+        "description": "الجذر العميق — بلغة المشكلة لا المعمارية",
+        "points": [
+          "لا يوجد مصدر موحد للحقيقة التشغيلية، والاعتماد على الذاكرة البشرية والسجلات اليدوية المفككة يعطل الإدارة الفعالة لـ 700 طالب."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.9,
+            "derived_from": [
+              "pd-summary-1",
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Root cause analysis: lack of centralized record mechanism, not software per se."
+          }
+        ]
+      },
+      "position": {
+        "x": 40,
+        "y": 780
+      },
+      "width": 320,
+      "height": 220,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-outcome-10",
+      "type": "pd-goals-node",
+      "data": {
+        "label": "Desired Outcome",
+        "description": "العالم بعد حل المشكلة — بدون ذكر الحل",
+        "points": [
+          "مدرسة تدار بفعالية بوجود سجلات دقيقة وموثوقة للطلاب، الرسوم، والعمليات التعليمية بجهد بشري مُحسّن."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.9,
+            "derived_from": [
+              "pd-goals-3",
+              "pd-pain-4"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "Vision statement derived from goals and pains."
+          }
+        ]
+      },
+      "position": {
+        "x": 420,
+        "y": 780
+      },
+      "width": 320,
+      "height": 220,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "pd-direction-11",
+      "type": "pd-summary-node",
+      "data": {
+        "label": "Strategic Direction",
+        "description": "إلى أين (WHERE) — بدون كيف (HOW)",
+        "points": [
+          "الانتقال من الإدارة اليدوية العشوائية إلى طريقة عمل مُنظمة تضمن سلامة البيانات وسيطرة الإدارة."
+        ],
+        "provenance": [
+          {
+            "point_index": 0,
+            "source": "ai_inference",
+            "confidence": 0.9,
+            "derived_from": [
+              "pd-insight-9",
+              "pd-outcome-10"
+            ],
+            "validation_status": "human_pending",
+            "reasoning": "High level strategy to bridging gap between current insight and desired output."
+          }
+        ]
+      },
+      "position": {
+        "x": 760,
+        "y": 780
+      },
+      "width": 320,
+      "height": 220,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    },
+    {
+      "id": "gate-problem-12",
+      "type": "gate-problem",
+      "data": {
+        "label": "PD Lock Gate",
+        "gateStatus": "pending_human_review",
+        "decisionAuthority": "Human Only",
+        "gateChecklist": [
+          "Summary points generated correctly.",
+          "Actors node populated with inferred pains.",
+          "Goals are aspirational and non-technical.",
+          "Pain points align with user words.",
+          "Scope defined without solution smuggling.",
+          "Signals describe behavioral change.",
+          "Unknowns contain boundary questions.",
+          "No words like 'system' or 'app' used inappropriately.",
+          "At least one boundary question present.",
+          "Insight addresses root cause without tech jargon.",
+          "Provenance present for all required nodes."
+        ]
+      },
+      "position": {
+        "x": 350,
+        "y": 1100
+      },
+      "width": 700,
+      "height": 300,
+      "parentId": "group-pd-20260518-school",
+      "extent": "parent"
+    }
+  ],
+  "edges": [
+    { "id": "e-1-2", "type": "custom", "source": "pd-summary-1", "target": "pd-actors-2" },
+    { "id": "e-2-3", "type": "custom", "source": "pd-actors-2", "target": "pd-goals-3" },
+    { "id": "e-3-4", "type": "custom", "source": "pd-goals-3", "target": "pd-pain-4" },
+    { "id": "e-5-6", "type": "custom", "source": "pd-constraints-5", "target": "pd-scope-6" },
+    { "id": "e-6-7", "type": "custom", "source": "pd-scope-6", "target": "pd-signals-7" },
+    { "id": "e-7-8", "type": "custom", "source": "pd-signals-7", "target": "pd-unknowns-8" },
+    { "id": "e-4-9", "type": "custom", "source": "pd-pain-4", "target": "pd-insight-9" },
+    { "id": "e-8-10", "type": "custom", "source": "pd-unknowns-8", "target": "pd-outcome-10" },
+    { "id": "e-9-11", "type": "custom", "source": "pd-insight-9", "target": "pd-direction-11" },
+    { "id": "e-10-11", "type": "custom", "source": "pd-outcome-10", "target": "pd-direction-11" },
+    { "id": "e-11-gate", "type": "custom", "source": "pd-direction-11", "target": "gate-problem-12" },
+    { "id": "e-insight-gate", "type": "custom", "source": "pd-insight-9", "target": "gate-problem-12" }
+  ],
+  "evidence": [],
+  "exportedAt": "2026-05-18T11:28:40.000Z"
+}
