@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "id": "group-s0-20260519-tailor_shop",
+      "type": "group",
+      "data": {
+        "label": "S0"
+      },
+      "position": {
+        "x": 150,
+        "y": -705
+      },
+      "width": 1697,
+      "height": 1100,
+      "style": {
+        "width": 1697,
+        "height": 1100,
+        "zIndex": -1
+      }
+    },
+    {
+      "id": "stage-0-1",
+      "type": "stage-0",
+      "data": {
+        "group": "S0",
+        "label": "Stage 0 — Problem / Technical Lock",
+        "description": "يعاني مصنع الخياطة من ضياع بيانات الزبائن والمقاسات بسبب الاعتماد على الورق، مما يسبب الحاجة المتكررة لإعادة أخذها. غياب سجل منظم للباترونات والموديلات، مما يؤدي إلى ارتجالية في العمليات. تداخل في الحسابات المالية وغياب سجل موثوق للأقمشة.",
+        "aiPercentage": 20,
+        "humanPercentage": 80,
+        "aiResponsibilities": ["تحليل نقاط الألم", "كشف أنماط الفشل"],
+        "humanResponsibilities": ["تحديد المشكلة الحقيقية", "تأكيد السياق", "تحديد القيود"],
+        "stageNumber": 0,
+        "restrictions": ["لا حلول تنفيذية", "لا API", "لا UI", "لا DB Schema", "لا Architecture Stack", "لا CRUD", "لا Code"],
+        "customFields": {},
+        "provenance": [
+          {
+            "source": "pd_output",
+            "confidence": 0.90,
+            "derived_from": ["pd-summary-1", "pd-actors-2"],
+            "validation_status": "human_pending",
+            "reasoning": "مستخلص من ملخص PD ونقاط الألم"
+          }
+        ]
+      },
+      "position": {
+        "x": 15,
+        "y": 60
+      },
+      "width": 300,
+      "height": 208,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    },
+    {
+      "id": "insight-node-2",
+      "type": "insight-node",
+      "data": {
+        "group": "S0",
+        "label": "Insight",
+        "description": "غياب حوكمة في عملية الحجز، مما يؤدي إلى تضارب في بيانات الزبائن دون وجود مساءلة فعالة.",
+        "provenance": [
+          {
+            "source": "ai_inference",
+            "confidence": 0.85,
+            "derived_from": ["pd-actors-2"],
+            "validation_status": "human_pending",
+            "reasoning": "استنتاج من البيانات المتعلقة بالأطراف المتأثرة"
+          }
+        ]
+      },
+      "position": {
+        "x": 210,
+        "y": 285
+      },
+      "width": 300,
+      "height": 297,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    },
+    {
+      "id": "outcome-node-3",
+      "type": "outcome-node",
+      "data": {
+        "group": "S0",
+        "label": "Outcome",
+        "description": "ضمان موثوقية سجل بيانات الزبائن والمقاسات + حوكمة واضحة للإجراءات + توفر دائم للمعلومات.",
+        "provenance": [
+          {
+            "source": "ai_inference",
+            "confidence": 0.80,
+            "derived_from": ["pd-summary-1"],
+            "validation_status": "human_pending",
+            "reasoning": "استنتاج من الملخص والتحديات المحددة"
+          }
+        ]
+      },
+      "position": {
+        "x": 570,
+        "y": 90
+      },
+      "width": 300,
+      "height": 299,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    },
+    {
+      "id": "direction-node-4",
+      "type": "direction-node",
+      "data": {
+        "group": "S0",
+        "label": "Direction",
+        "description": "التركيز على توفير سجل موحد للبيانات وحوكمة لضمان عدم التضارب في المعلومات.",
+        "provenance": [
+          {
+            "source": "ai_inference",
+            "confidence": 0.75,
+            "derived_from": ["pd-summary-1"],
+            "validation_status": "human_pending",
+            "reasoning": "استنتاجات مبنية على الوضع الحالي"
+          }
+        ]
+      },
+      "position": {
+        "x": 915,
+        "y": 225
+      },
+      "width": 300,
+      "height": 299,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    },
+    {
+      "id": "gate-problem-5",
+      "type": "gate-problem",
+      "data": {
+        "group": "S0",
+        "label": "S0 Blocking Gate",
+        "description": "لا يمكن الانتقال إلى S1 قبل اعتماد تعريف المشكلة من الإنسان.",
+        "gateType": "problem",
+        "decisionAuthority": "Human Only",
+        "gateStatus": "pending",
+        "aiPercentage": 0,
+        "humanPercentage": 100,
+        "gateChecklist": [
+          "المشكلة محددة وواضحة",
+          "جذر المشكلة حوكمي وليس عرضياً",
+          "الأضرار ملموسة ومصنفة",
+          "القيود موثقة",
+          "معايير النجاح قابلة للقياس",
+          "لا حلول تنفيذية في أي نود"
+        ]
+      },
+      "position": {
+        "x": 1095,
+        "y": 540
+      },
+      "width": 402,
+      "height": 237,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    },
+    {
+      "id": "alignment-gate-6",
+      "type": "alignment-gate",
+      "data": {
+        "group": "S0",
+        "label": "Alignment Gate",
+        "description": "Non-blocking: مراجعة سريعة لتأكيد أن الأطراف تفهم نفس تعريف المشكلة قبل التقدم."
+      },
+      "position": {
+        "x": 1395,
+        "y": 795
+      },
+      "width": 280,
+      "height": 298,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    },
+    {
+      "id": "evidence-node-7",
+      "type": "evidence-node",
+      "data": {
+        "group": "S0",
+        "label": "Evidence",
+        "mandatory": true,
+        "description": "الأدلة الداعمة تشمل الشهادات من الزبائن حول المشاكل التي واجهوها والبيانات المالية غير المرتبة.",
+        "evidenceKey": "s0_docs_pack",
+        "justification": "هذه الأدلة مهمة لفهم حدة المشكلة وتأثيرها على العملية.",
+        "owner": "الجهة المسؤولة عن جمع الأدلة",
+        "provenance": [
+          {
+            "source": "pd_output",
+            "confidence": 0.90,
+            "derived_from": ["pd-summary-1"],
+            "validation_status": "human_pending",
+            "reasoning": "مستخلص من ملخص PD"
+          }
+        ]
+      },
+      "position": {
+        "x": 1320,
+        "y": 75
+      },
+      "width": 320,
+      "height": 290,
+      "parentId": "group-s0-20260519-tailor_shop",
+      "extent": "parent"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-s0-insight",
+      "type": "custom",
+      "source": "stage-0-1",
+      "target": "insight-node-2"
+    },
+    {
+      "id": "e-insight-outcome",
+      "type": "custom",
+      "source": "insight-node-2",
+      "target": "outcome-node-3"
+    },
+    {
+      "id": "e-outcome-direction",
+      "type": "custom",
+      "source": "outcome-node-3",
+      "target": "direction-node-4"
+    },
+    {
+      "id": "e-direction-gate",
+      "type": "custom",
+      "source": "direction-node-4",
+      "target": "gate-problem-5"
+    },
+    {
+      "id": "e-gate-alignment",
+      "type": "custom",
+      "source": "gate-problem-5",
+      "target": "alignment-gate-6"
+    },
+    {
+      "id": "e-evidence-gate",
+      "type": "custom",
+      "source": "evidence-node-7",
+      "target": "gate-problem-5",
+      "label": "evidence"
+    }
+  ],
+  "evidence": [],
+  "exportedAt": "2026-05-19T10:00:52.000Z"
+}
