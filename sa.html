@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Styles for Product Page */
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+        .container {margin: 20px auto; max-width: 1200px;}
+        .product-gallery {display: flex;}
+        .product-image {flex: 2; padding: 10px;}
+        .product-image img {width: 100%;}
+        .product-info {flex: 3; padding: 10px;}
+        .product-info h1 {font-size: 2em;}
+        .product-info .price {font-size: 1.5em; color: green;}
+        .variants {margin-top: 10px;}
+        .reviews, .related-products {margin-top: 20px;}
+        .related-products .item {display: inline-block; width: 23%; margin: 1%;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product-gallery">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/600" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h1>Product Title</h1>
+            <div class="price">$99.99</div>
+            <div class="variants">
+                <h3>Size</h3>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+                <h3>Color</h3>
+                <select>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h2>Customer Reviews</h2>
+        <p>No reviews yet. Be the first to review!</p>
+    </div>
+
+    <div class="related-products">
+        <h2>Related Products</h2>
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Related Product">
+            <h3>Product Name</h3>
+            <p>$49.99</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Related Product">
+            <h3>Product Name</h3>
+            <p>$49.99</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Related Product">
+            <h3>Product Name</h3>
+            <p>$49.99</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Related Product">
+            <h3>Product Name</h3>
+            <p>$49.99</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
